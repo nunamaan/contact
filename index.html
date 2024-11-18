@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свяжитесь с нами</title>
+    <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Свяжитесь с нами</h1>
+        <form id="contact-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required placeholder="Ваше имя">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Ваш email">
+            
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required placeholder="Ваше сообщение"></textarea>
+            
+            <button type="submit">Отправить</button>
+        </form>
+        <p id="success-message" style="display: none;">Спасибо за ваше сообщение!</p>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('success-message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
